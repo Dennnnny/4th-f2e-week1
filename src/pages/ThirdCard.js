@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import HeaderComponent from "../components/HeaderComponent";
+import { device } from "../../styles/config";
 
 const ThirdCardLayout = styled.div.withConfig({
   componentId: "ThirdCardLayout",
@@ -26,6 +27,11 @@ const ThirdCardLayout = styled.div.withConfig({
     > img {
       width: 50%;
     }
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 
@@ -161,6 +167,11 @@ const CharacterCardLayout = styled.div.withConfig({
 
       margin-top: 16px;
     }
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 

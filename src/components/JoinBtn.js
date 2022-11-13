@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../styles/config";
 
 const JoinBtnLAyout = styled.div.withConfig({ componentId: "JoinBtnLayout" })`
   display: flex;
@@ -29,6 +30,11 @@ const JoinBtnLAyout = styled.div.withConfig({ componentId: "JoinBtnLayout" })`
 
     width: ${({ width }) => `${width || 40}px`};
     height: ${({ height }) => `${height || 25}px`};
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 

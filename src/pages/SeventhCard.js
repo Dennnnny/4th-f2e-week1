@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import HeaderComponent from "../components/HeaderComponent";
 import Tag from "../components/Tag";
+import { device } from "../../styles/config";
 
 const SeventhCardLayout = styled.div.withConfig({
   componentId: "SeventhCardLayout",
@@ -18,6 +19,11 @@ const SeventhCardLayout = styled.div.withConfig({
     /* height: 300px; */
     /* background-color: blue; */
     /* border: 1px solid white; */
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 
@@ -135,6 +141,11 @@ const SponsorCardLayout = styled.div.withConfig({
       width: 200px;
       height: 200px;
     }
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 

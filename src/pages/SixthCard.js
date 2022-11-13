@@ -4,6 +4,7 @@ import { gsap, Power0, Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { createRef, useEffect, useRef } from "react";
 import HeaderComponent from "../components/HeaderComponent";
+import { device } from "../../styles/config";
 
 const SixthCardLayout = styled.div.withConfig({
   componentId: "SixthCardLayout",
@@ -17,6 +18,11 @@ const SixthCardLayout = styled.div.withConfig({
     /* height: 300px; */
     /* background-color: blue; */
     /* border: 1px solid white; */
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 
@@ -163,6 +169,11 @@ const TrophyLayout = styled.div.withConfig({ componentId: "TrophyLayout" })`
     left: 0;
     z-index: -1;
   }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
+  }
 `;
 
 function Trophy({}) {
@@ -205,6 +216,11 @@ const RuleCardLayout = styled.div.withConfig({
 
   span.hint {
     color: #ff5136;
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 

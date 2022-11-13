@@ -2,6 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { createRef, useEffect } from "react";
 import styled from "styled-components";
+import { device } from "../../styles/config";
 
 const HeaderComponentLayout = styled.div.withConfig({
   componentId: "HeaderComponentLayout",
@@ -34,6 +35,11 @@ const HeaderComponentLayout = styled.div.withConfig({
     font-size: 20px;
     line-height: 140%;
     white-space: break-spaces;
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 

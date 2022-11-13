@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import HeaderComponent from "../components/HeaderComponent";
 import Tag from "../components/Tag";
 import JoinBtn from "../components/JoinBtn";
+import { device } from "../../styles/config";
 
 const FifthCardLayout = styled.div.withConfig({
   componentId: "FifthCardLayout",
@@ -33,6 +34,11 @@ const FifthCardLayout = styled.div.withConfig({
     text-align: center;
     letter-spacing: 0.05em;
     color: #ff5136;
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 
@@ -194,6 +200,11 @@ const ScheduleCardLayout = styled.div.withConfig({
       color: #ff5136;
       font-size: 18px;
     }
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 

@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import HeaderComponent from "../components/HeaderComponent";
 import Tag from "../components/Tag";
+import { device } from "../../styles/config";
 
 const FourthCardLayout = styled.div.withConfig({
   componentId: "FourthCardLayout",
@@ -18,6 +19,11 @@ const FourthCardLayout = styled.div.withConfig({
     height: 300px;
     border: 1px solid white; */
     /* background-color: blue; */
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 
@@ -206,6 +212,11 @@ const ThemeCardLayout = styled.div.withConfig({
 
   > .TagLayout {
     margin-bottom: 20px;
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 

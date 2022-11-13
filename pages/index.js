@@ -13,6 +13,7 @@ import SixthCard from "../src/pages/SixthCard";
 import SeventhCard from "../src/pages/SeventhCard";
 import LastCard from "../src/pages/LastCard";
 import JoinBtn from "../src/components/JoinBtn";
+import { device } from "../styles/config";
 
 export default function Home() {
   const container = useRef();
@@ -182,6 +183,12 @@ const HeaderLayout = styled.header.withConfig({
   box-shadow: 0 0 1px #ffc37d99;
   background-color: #ffc37d;
   z-index: 2;
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    left: 50%;
+    transform: translate(-50%);
+  }
 `;
 
 function Header() {
@@ -230,6 +237,12 @@ const FooterLayout = styled.footer.withConfig({
     position: absolute;
     right: 16px;
     bottom: 20px;
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    left: 50%;
+    transform: translate(-50%);
   }
 `;
 

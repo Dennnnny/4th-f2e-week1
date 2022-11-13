@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../styles/config";
 
 const Layout = styled.section.withConfig({ componentId: "SectionLayout" })`
   box-sizing: border-box;
@@ -9,6 +10,11 @@ const Layout = styled.section.withConfig({ componentId: "SectionLayout" })`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
+  }
 `;
 
 export default function Section({ className, children }) {

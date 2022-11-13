@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import JoinBtn from "../components/JoinBtn";
+import { device } from "../../styles/config";
 
 const LastCardLayout = styled.div.withConfig({
   componentId: "LastCardLayout",
@@ -26,6 +27,11 @@ const LastCardLayout = styled.div.withConfig({
     line-height: 125%;
     letter-spacing: 0.05em;
     color: #ff5136;
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 

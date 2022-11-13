@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { TextPlugin } from "gsap/dist/TextPlugin";
 import { useEffect, useRef } from "react";
 import Tag from "../components/Tag";
+import { device } from "../../styles/config";
 // import Users from "../../public/users.svg";
 const FirstCardLayout = styled.div.withConfig({
   componentId: "FirstCardLayout",
@@ -53,6 +54,11 @@ const FirstCardLayout = styled.div.withConfig({
       }
       /* bottom: ; */
     }
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 
@@ -195,6 +201,11 @@ const TeamsInfoLayout = styled.div.withConfig({
     line-height: 140%;
     letter-spacing: 0.05em;
     margin: 10px;
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 

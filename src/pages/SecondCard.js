@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import HeaderComponent from "../components/HeaderComponent";
+import { device } from "../../styles/config";
 
 const SecondCardLayout = styled.div.withConfig({
   componentId: "SecondCardLayout",
@@ -12,6 +13,11 @@ const SecondCardLayout = styled.div.withConfig({
   width: 100vw;
   overflow-x: hidden;
   margin-bottom: 70px;
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
+  }
 `;
 
 export default function SecondCard({ reference }) {
@@ -142,6 +148,11 @@ const CardLayout = styled.div.withConfig({ componentId: "CardLayout" })`
 
   img {
     width: 335px;
+  }
+
+  @media ${device.mobile} {
+    max-width: 375px;
+    margin: 0 auto;
   }
 `;
 
