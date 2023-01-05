@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Section from "../src/components/Section";
@@ -14,12 +14,25 @@ import SeventhCard from "../src/pages/SeventhCard";
 import LastCard from "../src/pages/LastCard";
 import JoinBtn from "../src/components/JoinBtn";
 import { device } from "../styles/config";
+import Loading from "../src/components/Loading";
 
 export default function Home() {
   const container = useRef();
   gsap.registerPlugin(ScrollTrigger);
+  const [ready, setReady] = useState(false)
+
+  useEffect(()=>{
+    let timer = setInterval(()=>{
+      setReady(true)
+    },2000)
+
+    return  () => clearInterval(timer)
+  },[])
 
   useEffect(() => {
+
+    if(!ready) return
+
     const element = container.current;
 
     gsap.fromTo(
@@ -144,7 +157,15 @@ export default function Home() {
     gsap.set(element.querySelector(".footer_join_btn"), {
       opacity: 0,
     });
-  }, []);
+  }, [ready]);
+
+  if(!ready) {
+    return(
+      <Section>
+        <Loading />
+      </Section>
+    )
+  }
 
   return (
     <div ref={container} style={{ paddingTop: 60 }}>

@@ -24,3 +24,13 @@ GSAP
 有機會的話 😅 =.=
 
 By Denny
+
+## Change Log
+
+2023-01-06
+
+先新增一個 loading 載入畫面
+
+to be continued...
+
+---
